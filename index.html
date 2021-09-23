@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent;
+
+      /* include border and padding in element width and height */
+      box-sizing: border-box;
+
+      font-family: 'Red Hat Display', serif;
+      font-size: 16px;
+    }
+
+    /* use viewport-relative units to cover page fully */
+    body {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    @media screen and (max-width: 600px) {
+      .card {
+        height: 80%;
+        width: 80%;
+        background-color: white;
+        border-radius: 20px;
+      }
+
+      .container {
+        background-color: #D6E1FF;
+      }
+
+      .card .body {
+        padding: 20px 20px;
+      }
+    }
+
+    @media screen and (min-width: 601px) {
+      .card {
+        width: 25%;
+        height: 80%;
+        background-color: white;
+        border-radius: 20px;
+      }
+
+      .container {
+        background-image: url('./images/pattern-background-desktop.svg');
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: hsl(225, 100%, 94%);
+      }
+
+      .card .body {
+        padding: 20px 60px;
+      }
+    }
+
+    .container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+    .card .media {
+      background-image: url('./images/illustration-hero.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 30%;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .card .body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 70%;
+    }
+
+    .card .body h1 {
+      font-weight: 900;
+      column-gap: 20px;
+      font-family: 'Red Hat Display';
+      font-size: 18pt
+    }
+
+    .card .body p {
+      font-weight: 500;
+      column-gap: 20px;
+      font-size: 11pt;
+      color: hsl(224, 23%, 55%);
+      text-align: center;
+      line-height: 14pt;
+      letter-spacing: 1pt;
+    }
+
+    .card .body .plan {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      background-color: hsl(225, 100%, 98%);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .card .body .icon {
+      background-image: url('./images/icon-music.svg');
+      height: 50px;
+      width: 50px;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+
+    .card .body .plan a {
+      color: hsl(245, 75%, 52%);
+      text-decoration: underline;
+      font-weight: 700;
+      font-size: 10pt;
+      letter-spacing: 1pt;
+    }
+
+    .card .body .plan a:hover {
+      text-decoration: none;
+      cursor: pointer;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .card button {
+      background-color: hsl(245, 75%, 52%);
+      border-radius: 10px;
+      padding: 15px;
+      color: hsl(225, 100%, 98%);
+      font-weight: 700;
+      width: 100%;
+      font-size: 10pt;
+      letter-spacing: 1pt;
+    }
+
+    .card .body a {
+      font-weight: 900;
+      color: hsl(224, 23%, 55%);
+      letter-spacing: 1pt;
+    }
+
+    .card .body a:hover {
+      color: #000;
+      cursor: pointer;
+    }
+
+    .shadow {
+      box-shadow: 0 10px 50px hsl(224, 23%, 55%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card shadow">
+      <div class="media">
+
+      </div>
+      <div class="body">
+        <h1>Order Summary</h1>
+        <p>You can now listen to millions of songs, audiobooks, and pdcasts on any device anywhere you like!</p>
+        <div class="plan">
+          <div class="icon">
+          </div>
+          <div>
+            <h2>Annual plan</h2>
+            <p>$59.99/year</p>
+          </div>
+          <a>Change</a>
+        </div>
+        <button class="shadow">Proceed to Payment</button>
+        <a>Cancel order</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
